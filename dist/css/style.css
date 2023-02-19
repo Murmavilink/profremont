@@ -1556,8 +1556,8 @@ input.error {
 
 .header-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 25px;
+  right: 25px;
   font-size: 36px;
   cursor: pointer;
 }
@@ -1568,8 +1568,8 @@ input.error {
 
 .services-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 25px;
+  right: 25px;
   font-size: 36px;
   cursor: pointer;
 }

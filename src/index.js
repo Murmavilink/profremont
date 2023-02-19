@@ -1,7 +1,5 @@
-import burger from './modules/burger';
-import slider from './modules/slider';
+import { modal } from "./modules/modal";
 
 
-
-burger();
-slider();
+modal('#header .fancyboxModal', '.header-modal', '.header-modal__close');
+modal('#services .fancyboxModal', '.services-modal', '.services-modal__close');
