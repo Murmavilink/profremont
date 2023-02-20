@@ -1,3 +1,8 @@
+@import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+@import './bootstrap.min.css';
+@import './animate.css';
+@import '../fonts/font.css';
+
 html {
   height: 100%;
 }
@@ -1167,6 +1172,16 @@ p.services-image_mobile {
   .about-wrap .col-sm-12:last-child .about-inner {
     margin-bottom: 0;
   }
+  .row {
+    margin: 0;
+  }
+  .service-image {
+    display: none;
+  }
+  .service-text {
+    margin-left: 0;
+    border-radius: 10px;
+  }
   #header .button {
     padding-top: 10px;
   }
@@ -1324,13 +1339,6 @@ p.services-image_mobile {
   }
 }
 @media (max-width: 580px) {
-  .service-image {
-    display: none;
-  }
-  .service-text {
-    margin-left: 0;
-    border-radius: 10px;
-  }
   .offer-heading {
     width: 100%;
     max-width: 100%;
@@ -1596,9 +1604,20 @@ input.error {
   margin: 0 auto;
 }
 
-.benefits__item {
+.benefits-inner {
   width: 100%;
-  max-width: 185px;
+  max-width: 600px;
+}
+
+/* .swiper {
+  width: 100%;
+  max-width: 600px;
+  min-height: 220px;
+} */
+
+.services-inner {
+  width: 100%;
+  max-width: 1200px;
 }
 
 .benefits-arrows {
