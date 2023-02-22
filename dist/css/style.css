@@ -1,7 +1,9 @@
 @import 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
 @import './bootstrap.min.css';
 @import './animate.css';
+@import './preloader.css';
 @import '../fonts/font.css';
+
 
 html {
   height: 100%;
