@@ -1740,6 +1740,8 @@ height: 100%;
 }
 
 .smooth-scroll {
+  display: none;
+  cursor: pointer;
   position: fixed;
   right: 25px;
   bottom: 25px;
