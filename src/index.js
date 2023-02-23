@@ -3,6 +3,7 @@ import { slider } from "./modules/slider";
 import { timer } from "./modules/timer";
 import { sendForm } from "./modules/sendForm";
 import { comments }  from "./modules/comments";
+import { calc } from "./modules/calc";
 
 modal('#header .fancyboxModal', '.header-modal', '.header-modal__close');
 modal('#services .fancyboxModal', '.services-modal', '.services-modal__close');
@@ -16,3 +17,4 @@ sendForm({
     someElem: [{type: 'input', id: 'calc-total'}] 
 });
 comments();
+calc(1000);
