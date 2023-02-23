@@ -21,13 +21,17 @@ export const calc = (price = 1000) => {
         return totalValue;
     };
 
-    calcBlock.addEventListener('input', (e) => {
-        calcTotal.value = calcCount();
-    });
 
+    try {
+        calcBlock.addEventListener('input', (e) => {
+            calcTotal.value = calcCount();
+        });
+
+        caclSquare.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^.\d]+/g, '');
+        });
+    } catch(error) {
+        console.log(error.message);
+    }
     
-    caclSquare.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^.\d]+/g, '');
-    });
-
 };
