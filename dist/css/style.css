@@ -709,37 +709,47 @@ p.services-image_mobile {
 }
 .review-arrow:after {
   content: "";
+  display: block;
   position: absolute;
-  top: 67px;
-  background-image: url("../images/review-arrows.png");
+  top: 40%;
+  /* left: -40px; */
+  /* background-image: url("../images/review-arrows.png"); */
+  background-color: red;
+  border-radius: 0% 100% 0% 100% / 0% 51% 49% 100%;
   background-repeat: no-repeat;
   width: 39px;
   height: 33px;
 }
-.review-arrow-left {
-  margin-left: 39px;
+
+.review-arrow-left::after {
+  left: -40px;
 }
-.review-arrow-right {
-  margin-right: 39px;
+.review-arrow-right::after {
+  right: -40px;
+  transform: rotateY(160deg)
 }
-.review-arrow-left:after {
-  left: -39px;
+
+.review-green::after {
+  background-color: #00902A;
 }
-.review-arrow-right:after {
-  right: -39px;
+.review-gray::after {
+  background-color: #466A78;
 }
-.review-green:after {
-  background-position: 0px 0px;
+.review-orange::after {
+  background-color: #ffb135;
 }
-.review-orange:after {
-  background-position: -39px 0px;
-}
-.review-gray:after {
-  background-position: -78px 0px;
-}
+
 .review-margin-bottom {
   margin-bottom: 80px;
 }
+
+.form-comments__input {
+  width: 100%;
+}
+.form-comments__text {
+  width: 100%;
+}
+
 #about {
   background-color: #466a78;
   color: #fff;
