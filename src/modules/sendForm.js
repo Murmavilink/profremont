@@ -1,12 +1,11 @@
 import { validate } from "./validate";
 
-export const sendForm = ({ someElem = [] }) => {
+export const sendForm = ({someElem = []}) => {
     const forms = document.querySelectorAll('form');
     const preloader = document.createElement('div');
     const statusBlock = document.createElement('p');
     const errorText = '<strong>Ошибка...</strong>';
     const succesText = '<strong>Спасибо! Наш менеджер с вами свяжется</strong>';
-
 
     preloader.insertAdjacentHTML("beforeend", `
     <div id="preloader"><div id="loader"></div></div>`);
@@ -40,24 +39,25 @@ export const sendForm = ({ someElem = [] }) => {
             formBody[key] = val;
         });
 
-        someElem.forEach(elem => {
-            const element = document.getElementById(elem.id);
-
-            if(element) {
-                if (elem.type === 'block') {
-                    formBody[elem.id] = element.textContent;
-                } else if (elem.type === 'input') {
-                    formBody[elem.id] = element.value;
+        if(someElem.length) {
+            someElem.forEach(elem => {
+                const element = document.getElementById(elem.id);
+    
+                if(element) {
+                    if (elem.type === 'block') {
+                        formBody[elem.id] = element.textContent;
+                    } else if (elem.type === 'input') {
+                        formBody[elem.id] = element.value;
+                    }
                 }
-            }
-        
-        });
-
+            
+            });    
+        }
+      
         sendData(formBody).then(data => {
             preloader.style.display = "none";
 
             statusBlock.innerHTML = succesText;
-
             clearinputsValue(formElements);
             clearStatusBlock();
         }).catch(error => {
